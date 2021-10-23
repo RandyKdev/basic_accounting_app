@@ -65,8 +65,6 @@ flutter:
       fonts:
         - asset: fonts/DMSans-Bold.ttf
           weight: 700
-        - asset: fonts/DMSans-Medium.ttf
-          weight: 500
         - asset: fonts/DMSans-Regular.ttf
           weight: 400
   #

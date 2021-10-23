@@ -1,4 +1,5 @@
 import 'package:basic/constants/color_constants.dart';
+import 'package:basic/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:basic/screens/splash/splash_screen.dart';

@@ -30,7 +30,10 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
+                      ),
                       child: Text(
                         'Enter your mobile number',
                         textAlign: TextAlign.center,
@@ -38,7 +41,10 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
+                      ),
                       child: Text(
                         "We'll send you a verification code.\nMessage and data charges may apply",
                         textAlign: TextAlign.center,

@@ -29,7 +29,7 @@ class VerifyNumberScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                   vertical: 5,
-                  horizontal: 20,
+                  horizontal: 40,
                 ),
                 child: Text(
                   'Verify your mobile number',
@@ -40,7 +40,7 @@ class VerifyNumberScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                   vertical: 5,
-                  horizontal: 20,
+                  horizontal: 40,
                 ),
                 child: Text(
                   "Enter the code received by SMS below to verify your phone number",

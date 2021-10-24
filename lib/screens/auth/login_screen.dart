@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 5,
-                        horizontal: 20,
+                        horizontal: 40,
                       ),
                       child: Text(
                         'Enter your mobile number',

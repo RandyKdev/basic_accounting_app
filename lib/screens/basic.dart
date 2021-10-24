@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/auth/business_account.dart';
 import 'package:basic/screens/auth/individual_account.dart';
 import 'package:basic/screens/auth/login_screen.dart';
 import 'package:basic/screens/auth/setup_account_screen.dart';
@@ -37,7 +38,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: IndividualAccountScreen(),
+      home: BusinessAccountScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

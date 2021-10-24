@@ -1,5 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/auth/business_account.dart';
+import 'package:basic/screens/auth/individual_account.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,6 +14,14 @@ class SetupAccountScreen extends StatelessWidget {
       SystemUiOverlay.top,
       SystemUiOverlay.bottom,
     ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: desaturatedGreyColor,
+      statusBarBrightness: Brightness.light,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: desaturatedGreyColor,
+    ));
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -53,100 +63,117 @@ class SetupAccountScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 50,
-                              height: 50,
-                              child: Image.asset('./images/account_icon.png'),
-                              decoration: BoxDecoration(
-                                color: lightPurpleColor,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50)),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 20),
-                              child: Text(
-                                'Individual account',
-                                style: subtitleBoldTextStyle,
-                              ),
-                            ),
-                            Text(
-                              'Freelance, microentrepreneur, independent contractor etc...',
-                              style: captionTextStyle.merge(
-                                TextStyle(
-                                  color: lightGreyColor,
+              InkWell(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return IndividualAccountScreen();
+                  }));
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 20),
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 50,
+                                height: 50,
+                                child: Image.asset('./images/account_icon.png'),
+                                decoration: BoxDecoration(
+                                  color: lightPurpleColor,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50)),
                                 ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: EdgeInsets.only(top: 20),
+                                child: Text(
+                                  'Individual account',
+                                  style: subtitleBoldTextStyle,
+                                ),
+                              ),
+                              Text(
+                                'Freelance, microentrepreneur, independent contractor etc...',
+                                style: captionTextStyle.merge(
+                                  TextStyle(
+                                    color: lightGreyColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Icon(Icons.arrow_forward_ios),
-                  ],
+                      Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(bottom: 10),
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 50,
-                              height: 50,
-                              child: Image.asset('./images/business_icon.png'),
-                              decoration: BoxDecoration(
-                                color: lightOrangeColor,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50)),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 20),
-                              child: Text(
-                                'Business account',
-                                style: subtitleBoldTextStyle,
-                              ),
-                            ),
-                            Text(
-                              'For micro businesses, small and medium sized businesses etc...',
-                              style: captionTextStyle.merge(
-                                TextStyle(
-                                  color: lightGreyColor,
+              InkWell(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return BusinessAccountScreen();
+                  }));
+                },
+                child: Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 50,
+                                height: 50,
+                                child:
+                                    Image.asset('./images/business_icon.png'),
+                                decoration: BoxDecoration(
+                                  color: lightOrangeColor,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50)),
                                 ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: EdgeInsets.only(top: 20),
+                                child: Text(
+                                  'Business account',
+                                  style: subtitleBoldTextStyle,
+                                ),
+                              ),
+                              Text(
+                                'For micro businesses, small and medium sized businesses etc...',
+                                style: captionTextStyle.merge(
+                                  TextStyle(
+                                    color: lightGreyColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Icon(Icons.arrow_forward_ios),
-                  ],
+                      Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
                 ),
               ),
               Expanded(

@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/auth/setup_account_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,6 +13,14 @@ class VerifyNumberScreen extends StatelessWidget {
       SystemUiOverlay.top,
       SystemUiOverlay.bottom,
     ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: desaturatedGreyColor,
+      statusBarBrightness: Brightness.light,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: desaturatedGreyColor,
+    ));
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -83,7 +92,12 @@ class VerifyNumberScreen extends StatelessWidget {
                       style: labelBoldTextStyle,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext ctx) {
+                          return SetupAccountScreen();
+                        }));
+                      },
                       child: Text(
                         'Resend code',
                         style: labelBoldTextStyle,

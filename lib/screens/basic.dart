@@ -38,7 +38,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: BusinessAccountScreen(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -26,26 +26,31 @@ class BusinessAccountScreen extends StatelessWidget {
         brightness: Brightness.dark,
         backgroundColor: primaryColor,
         title: FittedBox(
-          child: Container(
-            padding: EdgeInsets.symmetric(
-              vertical: 10,
-              horizontal: 20,
-            ),
-            decoration: BoxDecoration(
-                color: whiteColor!.withOpacity(.1),
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.arrow_back_ios,
-                  size: 17,
-                ),
-                SizedBox(width: 10),
-                Text(
-                  'Return',
-                  style: labelBoldTextStyle,
-                ),
-              ],
+          child: InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(
+                vertical: 10,
+                horizontal: 20,
+              ),
+              decoration: BoxDecoration(
+                  color: whiteColor!.withOpacity(.1),
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.arrow_back_ios,
+                    size: 17,
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    'Return',
+                    style: labelBoldTextStyle,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:basic/constants/color_constants.dart';
+import 'package:basic/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,11 +12,19 @@ class SplashScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Container(
-        child: Center(
-          child: Image.asset(
-            'images/basic_logo.jpeg',
-            fit: BoxFit.contain,
+      body: GestureDetector(
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (BuildContext ctx) {
+            return LoginScreen();
+          }));
+        },
+        child: Container(
+          child: Center(
+            child: Image.asset(
+              'images/basic_logo.jpeg',
+              fit: BoxFit.contain,
+            ),
           ),
         ),
       ),

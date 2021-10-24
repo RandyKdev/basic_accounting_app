@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/auth/verify_number_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,6 +13,14 @@ class LoginScreen extends StatelessWidget {
       SystemUiOverlay.top,
       SystemUiOverlay.bottom,
     ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: desaturatedGreyColor,
+      statusBarBrightness: Brightness.light,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: desaturatedGreyColor,
+    ));
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -116,7 +125,12 @@ class LoginScreen extends StatelessWidget {
                           backgroundColor:
                               MaterialStateProperty.all(accentColor),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (BuildContext ctx) {
+                            return VerifyNumberScreen();
+                          }));
+                        },
                         child: Text(
                           'Continue',
                           style: bodyBoldTextStyle,

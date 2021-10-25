@@ -244,7 +244,7 @@ class DashboardScreen extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.all(15),
                             decoration: BoxDecoration(
-                              color: lightPurpleColor,
+                              color: lightGreenColor,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(60)),
                             ),
@@ -256,6 +256,7 @@ class DashboardScreen extends StatelessWidget {
                             'Invoice',
                             style: captionBoldTextStyle,
                           ),
+                          SizedBox(height: 3),
                           Text(
                             'Easily create and manage your invoice to help you track your incomes',
                             style: labelTextStyle
@@ -282,7 +283,7 @@ class DashboardScreen extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.all(15),
                             decoration: BoxDecoration(
-                              color: lightPurpleColor,
+                              color: lightRedColor,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(60)),
                             ),
@@ -324,7 +325,7 @@ class DashboardScreen extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.all(15),
                             decoration: BoxDecoration(
-                              color: lightPurpleColor,
+                              color: lightOrangeColor,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(60)),
                             ),
@@ -336,6 +337,7 @@ class DashboardScreen extends StatelessWidget {
                             'Items',
                             style: captionBoldTextStyle,
                           ),
+                          SizedBox(height: 3),
                           Text(
                             'Easily create and manage your invoice to help you track your incomes',
                             style: labelTextStyle
@@ -374,6 +376,8 @@ class DashboardScreen extends StatelessWidget {
                             'Customer',
                             style: captionBoldTextStyle,
                           ),
+                          SizedBox(height: 3),
+                          SizedBox(height: 3),
                           Text(
                             'Easily create and manage your invoice to help you track your incomes',
                             style: labelTextStyle
@@ -382,6 +386,94 @@ class DashboardScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        elevation: 0,
+        child: Container(
+          decoration: BoxDecoration(
+            color: desaturatedGreyColor,
+            border: Border(
+              top: BorderSide(
+                color: veryLightGreyColor!,
+                width: 2,
+              ),
+            ),
+          ),
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          height: 70,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/home_active_icon.png',
+                    fit: BoxFit.contain,
+                    width: 18,
+                    height: 20,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'Dashboard',
+                    style: labelTextStyle.merge(TextStyle(color: accentColor)),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/sales_inactive_icon.png',
+                    fit: BoxFit.contain,
+                    width: 18,
+                    height: 20,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'Sales',
+                    style:
+                        labelTextStyle.merge(TextStyle(color: lightGreyColor)),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/purchases_inactive_icon.png',
+                    fit: BoxFit.contain,
+                    width: 18,
+                    height: 20,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'Purchases',
+                    style:
+                        labelTextStyle.merge(TextStyle(color: lightGreyColor)),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/more_inactive_icon.png',
+                    fit: BoxFit.contain,
+                    width: 18,
+                    height: 20,
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'More',
+                    style:
+                        labelTextStyle.merge(TextStyle(color: lightGreyColor)),
                   ),
                 ],
               ),

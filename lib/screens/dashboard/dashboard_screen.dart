@@ -46,7 +46,7 @@ class DashboardScreen extends StatelessWidget {
           IconButton(
             onPressed: () {},
             color: primaryColor,
-            icon: Icon(Icons.notifications_active),
+            icon: Image.asset('images/bell_icon.png'),
           ),
         ],
       ),
@@ -249,11 +249,11 @@ class DashboardScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(60)),
                             ),
                             clipBehavior: Clip.hardEdge,
-                            child: Image.asset('images/account_icon.png'),
+                            child: Image.asset('images/invoice_icon.png'),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Invoices',
+                            'Invoice',
                             style: captionBoldTextStyle,
                           ),
                           Text(
@@ -287,11 +287,11 @@ class DashboardScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(60)),
                             ),
                             clipBehavior: Clip.hardEdge,
-                            child: Image.asset('images/account_icon.png'),
+                            child: Image.asset('images/expenses_icon.png'),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Invoices',
+                            'Expenses',
                             style: captionBoldTextStyle,
                           ),
                           Text(
@@ -329,11 +329,11 @@ class DashboardScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(60)),
                             ),
                             clipBehavior: Clip.hardEdge,
-                            child: Image.asset('images/account_icon.png'),
+                            child: Image.asset('images/items_icon.png'),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Invoices',
+                            'Items',
                             style: captionBoldTextStyle,
                           ),
                           Text(
@@ -367,11 +367,11 @@ class DashboardScreen extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(60)),
                             ),
                             clipBehavior: Clip.hardEdge,
-                            child: Image.asset('images/account_icon.png'),
+                            child: Image.asset('images/customer_icon.png'),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Invoices',
+                            'Customer',
                             style: captionBoldTextStyle,
                           ),
                           Text(

@@ -225,6 +225,166 @@ class DashboardScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightPurpleColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/account_icon.png'),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Invoices',
+                            style: captionBoldTextStyle,
+                          ),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightPurpleColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/account_icon.png'),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Invoices',
+                            style: captionBoldTextStyle,
+                          ),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightPurpleColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/account_icon.png'),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Invoices',
+                            style: captionBoldTextStyle,
+                          ),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightPurpleColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/account_icon.png'),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Invoices',
+                            style: captionBoldTextStyle,
+                          ),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

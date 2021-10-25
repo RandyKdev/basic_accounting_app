@@ -24,6 +24,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: desaturatedGreyColor,
+        brightness: Brightness.light,
         elevation: 0,
         title: Text(
           'Dashboard',

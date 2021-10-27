@@ -16,7 +16,7 @@ class DashboardScreen extends StatelessWidget {
 
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: desaturatedGreyColor,
-      statusBarBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
       systemNavigationBarIconBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.dark,
       systemNavigationBarColor: desaturatedGreyColor,
@@ -44,10 +44,13 @@ class DashboardScreen extends StatelessWidget {
               width: 1,
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            color: primaryColor,
-            icon: Image.asset('images/bell_icon.png'),
+          Padding(
+            padding: const EdgeInsets.only(right: 5),
+            child: IconButton(
+              onPressed: () {},
+              color: primaryColor,
+              icon: Image.asset('images/bell_icon.png'),
+            ),
           ),
         ],
       ),
@@ -136,91 +139,87 @@ class DashboardScreen extends StatelessWidget {
                         color: lightWhiteColor,
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                       ),
-                      child: Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.arrow_downward_sharp,
-                                          color: greenColor,
-                                          size: 20,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.arrow_downward_sharp,
+                                        color: greenColor,
+                                        size: 20,
+                                      ),
+                                      SizedBox(width: 10),
+                                      Expanded(
+                                        child: Text(
+                                          'Sales (XAF)',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: labelTextStyle.merge(
+                                              TextStyle(color: lightGreyColor)),
                                         ),
-                                        SizedBox(width: 10),
-                                        Expanded(
-                                          child: Text(
-                                            'Sales (XAF)',
-                                            maxLines: 2,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: labelTextStyle.merge(
-                                                TextStyle(
-                                                    color: lightGreyColor)),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      '650,000',
-                                      style: bodyBoldTextStyle
-                                          .merge(TextStyle(color: whiteColor)),
-                                    ),
-                                  ],
-                                ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    '650,000',
+                                    style: bodyBoldTextStyle
+                                        .merge(TextStyle(color: whiteColor)),
+                                  ),
+                                ],
                               ),
                             ),
-                            Container(
-                              width: 1,
-                              color: lightGreyColor,
-                              height: 50,
-                              margin: EdgeInsets.only(
-                                left: 10,
-                                right: 20,
+                          ),
+                          Container(
+                            width: 1,
+                            color: lightGreyColor,
+                            height: 50,
+                            margin: EdgeInsets.only(
+                              left: 10,
+                              right: 20,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.arrow_downward_sharp,
+                                        color: redColor,
+                                        size: 20,
+                                      ),
+                                      SizedBox(width: 10),
+                                      Expanded(
+                                        child: Text(
+                                          'Expenses (XAF)',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: labelTextStyle.merge(
+                                              TextStyle(color: lightGreyColor)),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    '350,000',
+                                    style: bodyBoldTextStyle
+                                        .merge(TextStyle(color: whiteColor)),
+                                  ),
+                                ],
                               ),
                             ),
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.arrow_downward_sharp,
-                                          color: redColor,
-                                          size: 20,
-                                        ),
-                                        SizedBox(width: 10),
-                                        Expanded(
-                                          child: Text(
-                                            'Expenses (XAF)',
-                                            maxLines: 2,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: labelTextStyle.merge(
-                                                TextStyle(
-                                                    color: lightGreyColor)),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 5),
-                                    Text(
-                                      '350,000',
-                                      style: bodyBoldTextStyle
-                                          .merge(TextStyle(color: whiteColor)),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

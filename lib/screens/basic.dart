@@ -39,7 +39,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: SplashScreen(),
+      home: DashboardScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -94,8 +94,10 @@ dynamic dashboardBody(BuildContext context) => SingleChildScrollView(
                           flex: 1,
                           child: Container(
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(
                                       Icons.arrow_downward_sharp,

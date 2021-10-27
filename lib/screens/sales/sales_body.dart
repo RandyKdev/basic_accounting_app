@@ -7,56 +7,61 @@ Widget salesBody(TabController tabController) {
     physics: NeverScrollableScrollPhysics(),
     controller: tabController,
     children: [
-      ListView.separated(
-          separatorBuilder: (_, __) {
-            return Divider(
-              height: 0,
-            );
-          },
-          itemCount: 50,
-          itemBuilder: (BuildContext context, int i) {
-            return InkWell(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                  vertical: 15,
-                  horizontal: 20,
-                ),
-                child: Row(
+      genListView(),
+      genListView(),
+      genListView(),
+    ],
+  );
+}
+
+ListView genListView() {
+  return ListView.separated(
+    separatorBuilder: (_, __) {
+      return Divider(
+        height: 0,
+      );
+    },
+    itemCount: 50,
+    itemBuilder: (BuildContext context, int i) {
+      return InkWell(
+        onTap: () {},
+        child: Container(
+          padding: EdgeInsets.symmetric(
+            vertical: 15,
+            horizontal: 20,
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Crepes pour Jim',
-                            style: bodyTextStyle,
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            '20 OCT 2021 • 06:23',
-                            style: labelTextStyle.merge(
-                              TextStyle(color: lightGreyColor),
-                            ),
-                          ),
-                        ],
-                      ),
+                    Text(
+                      'Crepes pour Jim',
+                      style: bodyTextStyle,
                     ),
-                    Expanded(
-                      child: Text(
-                        'Amoutn 234,095',
-                        style: captionBoldTextStyle,
-                        textAlign: TextAlign.right,
+                    SizedBox(height: 5),
+                    Text(
+                      '20 OCT 2021 • 06:23',
+                      style: labelTextStyle.merge(
+                        TextStyle(color: lightGreyColor),
                       ),
                     ),
                   ],
                 ),
               ),
-            );
-          }),
-      Icon(Icons.directions),
-      Icon(Icons.directions),
-    ],
+              Expanded(
+                child: Text(
+                  'Amoutn 234,095',
+                  style: captionBoldTextStyle,
+                  textAlign: TextAlign.right,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
   );
 }

@@ -62,7 +62,7 @@ AppBar salesAppBar() {
             height: 50,
             decoration: BoxDecoration(
               color: whiteColor,
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(Radius.circular(15)),
             ),
             child: TabBar(
               // controller: _tabController,

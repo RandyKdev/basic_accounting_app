@@ -1,6 +1,5 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/sales/sales_appbar.dart';
 import 'package:basic/screens/sales/sales_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -42,15 +41,30 @@ class _SalesScreenState extends State<SalesScreen>
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([
+      SystemUiOverlay.top,
+      SystemUiOverlay.bottom,
+    ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: primaryColor,
+      statusBarBrightness: Brightness.dark,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: desaturatedGreyColor,
+    ));
+
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
+          statusBarColor: primaryColor,
           statusBarBrightness: Brightness.dark,
           systemNavigationBarIconBrightness: Brightness.dark,
           statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: desaturatedGreyColor,
         ),
+        brightness: Brightness.dark,
         backgroundColor: primaryColor,
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(80),

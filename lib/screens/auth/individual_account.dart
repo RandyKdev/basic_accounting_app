@@ -1,6 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/dashboard/dashboard_screen.dart';
+import 'package:basic/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -230,7 +230,7 @@ class IndividualAccountScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                      return DashboardScreen();
+                      return MainScreen();
                     }));
                   },
                   child: Text(

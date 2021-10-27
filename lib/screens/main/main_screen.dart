@@ -2,6 +2,9 @@ import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/dashboard/dashboard_appbar.dart';
 import 'package:basic/screens/dashboard/dashboard_body.dart';
+import 'package:basic/screens/dashboard/dashboard_screen.dart';
+import 'package:basic/screens/sales/sales_appbar.dart';
+import 'package:basic/screens/sales/sales_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -12,12 +15,12 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final List<AppBar> _appBars = [
-    dashboardAppBar(),
-    dashboardAppBar(),
-    dashboardAppBar(),
-    dashboardAppBar(),
-  ];
+  // final List<Widget> _screens = [
+  //   DashboardScreen(),
+  //   SalesScreen(),
+  //   dashboardAppBar(),
+  //   dashboardAppBar(),
+  // ];
 
   void setCurrentIndex(int i) {
     setState(() {
@@ -25,19 +28,17 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  int _currentIndex = 0;
+  int _currentIndex = 1;
   @override
   Widget build(BuildContext context) {
-    final List<dynamic> _bodies = [
-      dashboardBody(context),
-      dashboardBody(context),
-      dashboardBody(context),
-      dashboardBody(context),
+    List<Widget> _screens = [
+      DashboardScreen(),
+      SalesScreen(),
+      dashboardAppBar(),
+      dashboardAppBar(),
     ];
-
     return Scaffold(
-      appBar: _appBars[_currentIndex],
-      body: _bodies[_currentIndex],
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: desaturatedGreyColor,
         currentIndex: _currentIndex,

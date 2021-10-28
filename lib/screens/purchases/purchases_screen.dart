@@ -1,17 +1,17 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/sales/sales_body.dart';
+import 'package:basic/screens/purchases/purchases_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class SalesScreen extends StatefulWidget {
-  const SalesScreen({Key? key}) : super(key: key);
+class PurchasesScreen extends StatefulWidget {
+  const PurchasesScreen({Key? key}) : super(key: key);
 
   @override
-  _SalesScreenState createState() => _SalesScreenState();
+  _PurchasesScreenState createState() => _PurchasesScreenState();
 }
 
-class _SalesScreenState extends State<SalesScreen>
+class _PurchasesScreenState extends State<PurchasesScreen>
     with SingleTickerProviderStateMixin {
   TabController? _tabController;
   int _index = 0;
@@ -37,7 +37,7 @@ class _SalesScreenState extends State<SalesScreen>
     super.dispose();
   }
 
-  List<String> tabs = ['Invoices', 'Items', 'Customers'];
+  List<String> tabs = ['Expenses', 'Items', 'Suppliers'];
 
   @override
   Widget build(BuildContext context) {
@@ -77,12 +77,12 @@ class _SalesScreenState extends State<SalesScreen>
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Sales',
+                      'Purchases',
                       style: h6TextStyle.merge(TextStyle(color: whiteColor)),
                     ),
                     Expanded(
                       child: Text(
-                        'Income (XAF): 300,000',
+                        'Spent (XAF): 300,000',
                         textAlign: TextAlign.right,
                         style: captionBoldTextStyle
                             .merge(TextStyle(color: lightGreyColor)),
@@ -118,7 +118,7 @@ class _SalesScreenState extends State<SalesScreen>
           ),
         ),
       ),
-      body: salesBody(_tabController!),
+      body: purchasesBody(_tabController!),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(

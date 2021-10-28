@@ -2,7 +2,7 @@ import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
 
-Widget salesBody(TabController tabController) {
+Widget purchasesBody(TabController tabController) {
   return TabBarView(
     // physics: NeverScrollableScrollPhysics(),
     controller: tabController,
@@ -60,10 +60,86 @@ Column genListView() {
           ],
         ),
       ),
-      Divider(
-        height: 0,
-        thickness: 3,
+      Container(
+        color: veryLightGreyColor,
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(vertical: 10),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 5,
+                ),
+                margin: EdgeInsets.only(
+                  left: 20,
+                  right: 10,
+                ),
+                decoration: BoxDecoration(
+                  color: lightGreyColor?.withOpacity(.3),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.filter_alt_outlined,
+                      size: 17,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 0,
+                        right: 10,
+                      ),
+                      child: Text(
+                        'Filters',
+                        style: labelBoldTextStyle,
+                      ),
+                    ),
+                    Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: Center(
+                        child: Text(
+                          '1',
+                          style: labelBoldTextStyle,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 7,
+                ),
+                margin: EdgeInsets.only(
+                  right: 10,
+                ),
+                decoration: BoxDecoration(
+                  color: lightGreyColor?.withOpacity(.3),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                child: Text(
+                  '01 Oct 2021 - 31 Oct 2021',
+                  style: labelTextStyle,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
+      // Divider(
+      //   height: 0,
+      //   thickness: 3,
+      // ),
       Expanded(
         child: ListView.separated(
           separatorBuilder: (_, __) {

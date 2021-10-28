@@ -3,6 +3,7 @@ import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/dashboard/dashboard_appbar.dart';
 import 'package:basic/screens/dashboard/dashboard_body.dart';
 import 'package:basic/screens/dashboard/dashboard_screen.dart';
+import 'package:basic/screens/purchases/purchases_screen.dart';
 import 'package:basic/screens/sales/sales_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -27,13 +28,13 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  int _currentIndex = 0;
+  int _currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     List<Widget> _screens = [
       DashboardScreen(),
       SalesScreen(),
-      SalesScreen(),
+      PurchasesScreen(),
       dashboardAppBar(),
     ];
     return Scaffold(

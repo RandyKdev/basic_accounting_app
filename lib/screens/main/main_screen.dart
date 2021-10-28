@@ -16,12 +16,12 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  // final List<Widget> _screens = [
-  //   DashboardScreen(),
-  //   SalesScreen(),
-  //   dashboardAppBar(),
-  //   dashboardAppBar(),
-  // ];
+  final List<Widget> _screens = [
+    DashboardScreen(),
+    SalesScreen(),
+    PurchasesScreen(),
+    MoreScreen(),
+  ];
 
   void setCurrentIndex(int i) {
     setState(() {
@@ -29,15 +29,17 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  int _currentIndex = 3;
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    List<Widget> _screens = [
-      DashboardScreen(),
-      SalesScreen(),
-      PurchasesScreen(),
-      MoreScreen(),
-    ];
+    // List<Widget> _screens = [
+    //   DashboardScreen(),
+    //   SalesScreen(),
+    //   PurchasesScreen(),
+    //   MoreScreen(),
+    // ];
+
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

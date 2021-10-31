@@ -78,34 +78,94 @@ class UploadProductScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  vertical: 20,
-                  horizontal: 20,
-                ),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                height: 60,
                 decoration: BoxDecoration(
                   color: whiteColor,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
                 ),
-                child: Text(
-                  'Product',
-                  style: bodyTextStyle,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton(
+                      style:
+                          bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                      hint: Text(
+                        'Product',
+                        style:
+                            bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                      ),
+                      onChanged: (String? t) {},
+                      icon: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 10,
+                          bottom: 5,
+                        ),
+                        child: RotatedBox(
+                          quarterTurns: 3,
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            size: 16,
+                            color: primaryColor,
+                          ),
+                        ),
+                      ),
+                      items: [
+                        DropdownMenuItem(
+                          value: 'Buea',
+                          child: Text('Buea'),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  vertical: 20,
-                  horizontal: 20,
-                ),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                height: 60,
                 decoration: BoxDecoration(
                   color: whiteColor,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
                 ),
-                child: Text(
-                  'Jim',
-                  style: bodyTextStyle,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton(
+                      style:
+                          bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                      hint: Text(
+                        'Jim',
+                        style:
+                            bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                      ),
+                      onChanged: (String? t) {},
+                      icon: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 10,
+                          bottom: 5,
+                        ),
+                        child: RotatedBox(
+                          quarterTurns: 3,
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            size: 16,
+                            color: primaryColor,
+                          ),
+                        ),
+                      ),
+                      items: [
+                        DropdownMenuItem(
+                          value: 'Buea',
+                          child: Text('Buea'),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
@@ -120,16 +180,46 @@ class UploadProductScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 20, horizontal: 20),
+                            height: 60,
                             decoration: BoxDecoration(
                               color: whiteColor,
                             ),
-                            padding: EdgeInsets.symmetric(
-                              vertical: 20,
-                              horizontal: 20,
-                            ),
-                            child: Text(
-                              'Crepes',
-                              style: bodyTextStyle,
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButton(
+                                  style: bodyTextStyle
+                                      .merge(TextStyle(color: primaryColor)),
+                                  hint: Text(
+                                    'Crepes',
+                                    style: bodyTextStyle
+                                        .merge(TextStyle(color: primaryColor)),
+                                  ),
+                                  onChanged: (String? t) {},
+                                  icon: Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 10,
+                                      bottom: 5,
+                                    ),
+                                    child: RotatedBox(
+                                      quarterTurns: 3,
+                                      child: Icon(
+                                        Icons.arrow_back_ios,
+                                        size: 16,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ),
+                                  items: [
+                                    DropdownMenuItem(
+                                      value: 'Buea',
+                                      child: Text('Buea'),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -167,6 +257,53 @@ class UploadProductScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: lightAccentColor,
+                        ),
+                        width: double.infinity,
+                        padding: EdgeInsets.all(20),
+                        child: Text(
+                          'Add a product',
+                          textAlign: TextAlign.center,
+                          style: bodyBoldTextStyle
+                              .merge(TextStyle(color: accentColor)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: lightRedColor,
+                        ),
+                        width: double.infinity,
+                        padding: EdgeInsets.symmetric(
+                          vertical: 20,
+                          horizontal: 5,
+                        ),
+                        child: Text(
+                          'Remove a product',
+                          textAlign: TextAlign.center,
+                          style: bodyBoldTextStyle
+                              .merge(TextStyle(color: redColor)),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -221,17 +221,23 @@ class UploadServiceScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 1),
                     Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: whiteColor,
-                      ),
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 20,
                       ),
-                      child: Text(
-                        'XAF80,000',
-                        style: bodyTextStyle,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                      ),
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintText: 'XAF80,000',
+                          hintStyle: bodyTextStyle
+                              .merge(TextStyle(color: primaryColor)),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
+                          enabledBorder: InputBorder.none,
+                        ),
                       ),
                     ),
                   ],

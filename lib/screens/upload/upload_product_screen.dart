@@ -225,34 +225,48 @@ class UploadProductScreen extends StatelessWidget {
                         ),
                         SizedBox(width: 1),
                         Container(
-                          decoration: BoxDecoration(
-                            color: whiteColor,
-                          ),
+                          width: 80,
                           padding: EdgeInsets.symmetric(
                             vertical: 20,
                             horizontal: 20,
                           ),
-                          child: Text(
-                            '08',
-                            style: bodyTextStyle,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                          ),
+                          child: TextField(
+                            // maxLength: 3,
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              hintText: '08',
+                              hintStyle: bodyTextStyle
+                                  .merge(TextStyle(color: primaryColor)),
+                              contentPadding: EdgeInsets.symmetric(vertical: 8),
+                              enabledBorder: InputBorder.none,
+                            ),
                           ),
                         ),
                       ],
                     ),
                     SizedBox(height: 1),
                     Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: whiteColor,
-                      ),
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 20,
                       ),
-                      child: Text(
-                        'XAF20,000',
-                        style: bodyTextStyle
-                            .merge(TextStyle(color: lightGreyColor)),
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                      ),
+                      child: TextField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintText: 'XAF20,000',
+                          hintStyle: bodyTextStyle
+                              .merge(TextStyle(color: lightGreyColor)),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
+                          enabledBorder: InputBorder.none,
+                        ),
                       ),
                     ),
                   ],

@@ -9,7 +9,103 @@ Widget salesBody(TabController tabController) {
     children: [
       genListInvoice(),
       genListItems(),
-      genListInvoice(),
+      genListCustomers(),
+    ],
+  );
+}
+
+Column genListCustomers() {
+  return Column(
+    children: [
+      Container(
+        padding: EdgeInsets.only(
+          right: 10,
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: TextField(
+                keyboardType: TextInputType.text,
+                style: bodyTextStyle,
+                decoration: InputDecoration(
+                  hintText: 'Search',
+                  hintStyle: captionTextStyle.merge(
+                    TextStyle(color: lightGreyColor),
+                  ),
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.only(
+                    left: 20,
+                    top: 13,
+                    bottom: 10,
+                    right: 20,
+                  ),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.search),
+                    onPressed: () {},
+                    color: greyColor,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: 1,
+              color: greyColor,
+              height: 35,
+              margin: EdgeInsets.symmetric(horizontal: 10),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.filter_alt_outlined),
+            ),
+          ],
+        ),
+      ),
+      Divider(
+        height: 0,
+        thickness: 3,
+      ),
+      Expanded(
+        child: ListView.separated(
+          separatorBuilder: (_, __) {
+            return Divider(
+              height: 0,
+            );
+          },
+          itemCount: 50,
+          itemBuilder: (BuildContext context, int i) {
+            return InkWell(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: 15,
+                  horizontal: 20,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Michele Manga',
+                          style: bodyTextStyle,
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          '20 OCT 2021 • 06:23',
+                          style: labelTextStyle.merge(
+                            TextStyle(color: lightGreyColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        ),
+      ),
     ],
   );
 }

@@ -56,7 +56,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: NewServiceScreen(),
+      home: MainScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

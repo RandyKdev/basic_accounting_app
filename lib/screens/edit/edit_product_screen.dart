@@ -1,5 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/edit/edit_service_screen.dart';
+import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -60,7 +62,10 @@ class EditProductScreen extends StatelessWidget {
             FittedBox(
               child: InkWell(
                 onTap: () {
-                  Navigator.of(context).pop();
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return UploadProductScreen();
+                  }));
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(
@@ -240,7 +245,12 @@ class EditProductScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return EditServiceScreen();
+                  }));
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),

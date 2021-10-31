@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/edit/edit_product_screen.dart';
 import 'package:flutter/material.dart';
 
 Widget salesBody(TabController tabController) {
@@ -275,7 +276,12 @@ Column genListInvoice() {
           itemCount: 50,
           itemBuilder: (BuildContext context, int i) {
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return EditProductScreen();
+                }));
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(
                   vertical: 15,

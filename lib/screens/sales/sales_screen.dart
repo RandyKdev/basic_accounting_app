@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/new/new_product_screen.dart';
 import 'package:basic/screens/sales/sales_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -120,7 +121,12 @@ class _SalesScreenState extends State<SalesScreen>
       ),
       body: salesBody(_tabController!),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (BuildContext ctx) {
+            return NewProductScreen();
+          }));
+        },
         child: Icon(
           Icons.add,
           semanticLabel: 'Add ' +

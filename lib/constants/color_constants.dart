@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color? primaryColor = Color.fromRGBO(0, 0, 0, 1);
 const Color? accentColor = Color.fromRGBO(0, 87, 251, 1);
+const Color? lightAccentColor = Color.fromRGBO(0, 87, 251, .1);
 const Color? whiteColor = Color.fromRGBO(255, 255, 255, 1);
 const Color? lightWhiteColor = Color.fromRGBO(255, 255, 255, 0.1);
 const Color? desaturatedGreyColor = Color.fromRGBO(229, 229, 229, 1);

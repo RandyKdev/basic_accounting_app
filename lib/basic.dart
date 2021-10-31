@@ -1,7 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/Edit/edit_product_screen.dart';
-import 'package:basic/screens/Edit/edit_service_screen.dart';
+import 'package:basic/screens/edit/edit_product_screen.dart';
+import 'package:basic/screens/edit/edit_service_screen.dart';
 import 'package:basic/screens/auth/business_account.dart';
 import 'package:basic/screens/auth/individual_account.dart';
 import 'package:basic/screens/auth/login_screen.dart';
@@ -10,6 +10,7 @@ import 'package:basic/screens/auth/verify_number_screen.dart';
 import 'package:basic/screens/dashboard/dashboard_screen.dart';
 import 'package:basic/screens/main/main_screen.dart';
 import 'package:basic/screens/sales/sales_screen.dart';
+import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:basic/screens/splash/splash_screen.dart';
@@ -52,7 +53,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: EditServiceScreen(),
+      home: UploadProductScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

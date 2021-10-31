@@ -36,10 +36,10 @@ class EditProductScreen extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.symmetric(
                     vertical: 10,
-                    horizontal: 20,
+                    horizontal: 10,
                   ),
                   decoration: BoxDecoration(
-                      color: whiteColor!.withOpacity(.1),
+                      color: lightWhiteColor,
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: Row(
                     children: [
@@ -47,7 +47,7 @@ class EditProductScreen extends StatelessWidget {
                         Icons.arrow_back_ios,
                         size: 17,
                       ),
-                      SizedBox(width: 10),
+                      SizedBox(width: 15),
                       Text(
                         'Return',
                         style: labelBoldTextStyle,
@@ -68,14 +68,11 @@ class EditProductScreen extends StatelessWidget {
                     horizontal: 10,
                   ),
                   decoration: BoxDecoration(
-                      color: whiteColor!.withOpacity(.1),
+                      color: lightWhiteColor,
                       borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.edit,
-                        size: 17,
-                      ),
+                      Image.asset('images/edit_icon.png'),
                       SizedBox(width: 15),
                       Text(
                         'Edit',
@@ -106,7 +103,162 @@ class EditProductScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(60),
         ),
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 20,
+                ),
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Text(
+                  'Product',
+                  style: bodyTextStyle,
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 20,
+                ),
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Text(
+                  'Jim',
+                  style: bodyTextStyle,
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: whiteColor,
+                            ),
+                            padding: EdgeInsets.symmetric(
+                              vertical: 20,
+                              horizontal: 20,
+                            ),
+                            child: Text(
+                              'Crepes',
+                              style: bodyTextStyle,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 1),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                          ),
+                          padding: EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 20,
+                          ),
+                          child: Text(
+                            '08',
+                            style: bodyTextStyle,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 1),
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 20,
+                      ),
+                      child: Text(
+                        'XAF20,000',
+                        style: bodyTextStyle
+                            .merge(TextStyle(color: lightGreyColor)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      persistentFooterButtons: [
+        Container(
+          padding: EdgeInsets.all(10),
+          color: desaturatedGreyColor,
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Subtotal (XAF): ',
+                    style: captionTextStyle
+                        .merge(TextStyle(color: lightGreyColor)),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '20,000',
+                      textAlign: TextAlign.end,
+                      style: captionTextStyle
+                          .merge(TextStyle(color: lightGreyColor)),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Total (XAF): ', style: bodyBoldTextStyle),
+                  Expanded(
+                    child: Text('20,000',
+                        textAlign: TextAlign.end, style: bodyBoldTextStyle),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: lightRedColor,
+                  ),
+                  width: double.infinity,
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    'Delete Invoice',
+                    textAlign: TextAlign.center,
+                    style: bodyBoldTextStyle.merge(TextStyle(color: redColor)),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

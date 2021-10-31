@@ -1,6 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/Edit/edit_product_screen.dart';
+import 'package:basic/screens/Edit/edit_service_screen.dart';
 import 'package:basic/screens/auth/business_account.dart';
 import 'package:basic/screens/auth/individual_account.dart';
 import 'package:basic/screens/auth/login_screen.dart';
@@ -51,7 +52,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: EditProductScreen(),
+      home: EditServiceScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

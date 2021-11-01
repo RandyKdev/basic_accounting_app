@@ -1,29 +1,49 @@
+import 'package:basic/Enums/button_size_enums.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatefulWidget {
-  const ButtonWidget({Key? key}) : super(key: key);
+class ButtonWidget extends StatelessWidget {
+  final void Function() onTap;
+  final bool loading;
+  final String text;
+  final Color backgroundColor;
+  final Color textColor;
+  final ButtonSize size;
 
-  @override
-  _ButtonWidgetState createState() => _ButtonWidgetState();
-}
+  const ButtonWidget({
+    required this.backgroundColor,
+    required this.loading,
+    required this.onTap,
+    required this.size,
+    required this.text,
+    required this.textColor,
+    Key? key,
+  }) : super(key: key);
 
-class _ButtonWidgetState extends State<ButtonWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-        color: lightRedColor,
-      ),
-      width: double.infinity,
-      padding: EdgeInsets.all(20),
-      margin: EdgeInsets.only(top: 40),
-      child: Text(
-        'Log out',
-        textAlign: TextAlign.center,
-        style: bodyBoldTextStyle.merge(TextStyle(color: redColor)),
+    return InkWell(
+      onTap: loading ? null : onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          color: loading ? greyColor : backgroundColor,
+        ),
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(
+          vertical: 20,
+          horizontal: size == ButtonSize.big ? 20 : 5,
+        ),
+        child: loading
+            ? CircularProgressIndicator(
+                color: Colors.white,
+              )
+            : Text(
+                text,
+                textAlign: TextAlign.center,
+                style: bodyBoldTextStyle.merge(TextStyle(color: textColor)),
+              ),
       ),
     );
   }

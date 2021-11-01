@@ -1,4 +1,5 @@
 import 'package:basic/Enums/button_size_enums.dart';
+import 'package:basic/classes/size_units_class.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
@@ -27,13 +28,15 @@ class ButtonWidget extends StatelessWidget {
       onTap: loading ? null : onTap,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.all(Radius.circular(SizeUnitsClass.big)),
           color: loading ? greyColor : backgroundColor,
         ),
         width: double.infinity,
         padding: EdgeInsets.symmetric(
-          vertical: 20,
-          horizontal: size == ButtonSize.big ? 20 : 5,
+          vertical: SizeUnitsClass.big,
+          horizontal: size == ButtonSize.big
+              ? SizeUnitsClass.big
+              : SizeUnitsClass.small,
         ),
         child: loading
             ? CircularProgressIndicator(

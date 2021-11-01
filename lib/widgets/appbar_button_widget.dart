@@ -1,5 +1,6 @@
 import 'package:basic/Enums/button_size_enums.dart';
-import 'package:basic/classes/gap_class.dart';
+import 'package:basic/classes/size_units_class.dart';
+import 'package:basic/classes/spacing_class.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
@@ -26,20 +27,20 @@ class AppBarButtonWidget extends StatelessWidget {
         onTap: onTap,
         child: Container(
           padding: EdgeInsets.symmetric(
-            vertical: SizeUnitsClass.regular,
+            vertical: SizeUnitsClass.medium,
             horizontal: size == ButtonSize.small
-                ? SizeUnitsClass.regular
+                ? SizeUnitsClass.medium
                 : SizeUnitsClass.big,
           ),
           decoration: BoxDecoration(
               color: lightWhiteColor,
               borderRadius: BorderRadius.all(
-                Radius.circular(SizeUnitsClass.regular),
+                Radius.circular(SizeUnitsClass.medium),
               )),
           child: Row(
             children: [
               icon,
-              SizedBox(width: 15),
+              SpacingClass.hrRegular,
               Text(
                 text,
                 style: labelBoldTextStyle,

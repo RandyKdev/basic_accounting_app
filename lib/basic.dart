@@ -1,3 +1,4 @@
+import 'package:basic/classes/size_units_class.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/edit/edit_product_screen.dart';
@@ -21,7 +22,6 @@ import 'package:flutter/services.dart';
 
 class Basic extends StatelessWidget {
   const Basic({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

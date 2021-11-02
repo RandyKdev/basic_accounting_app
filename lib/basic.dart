@@ -15,6 +15,7 @@ import 'package:basic/screens/main/main_screen.dart';
 import 'package:basic/screens/new/new_product_screen.dart';
 import 'package:basic/screens/new/new_service_screen.dart';
 import 'package:basic/screens/sales/sales_screen.dart';
+import 'package:basic/screens/upload/upload_item_screen.dart';
 import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:basic/screens/upload/upload_service_screen.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: EditService1Screen(),
+      home: UploadItemScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

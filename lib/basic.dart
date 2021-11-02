@@ -13,6 +13,7 @@ import 'package:basic/screens/auth/setup_account_screen.dart';
 import 'package:basic/screens/auth/verify_number_screen.dart';
 import 'package:basic/screens/dashboard/dashboard_screen.dart';
 import 'package:basic/screens/main/main_screen.dart';
+import 'package:basic/screens/new/new_customer_screen.dart';
 import 'package:basic/screens/new/new_item_screen.dart';
 import 'package:basic/screens/new/new_product_screen.dart';
 import 'package:basic/screens/new/new_service1_screen.dart';
@@ -64,7 +65,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: UploadCustomerScreen(),
+      home: NewCustomerScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

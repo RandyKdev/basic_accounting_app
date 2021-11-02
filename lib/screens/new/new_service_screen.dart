@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/widgets/row_price_details_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -300,7 +301,7 @@ class NewServiceScreen extends StatelessWidget {
           color: desaturatedGreyColor,
           child: Column(
             children: [
-              _buildRowPrice(
+              RowPriceDetailsWidget(
                 title: 'Subtotal (XAF): ',
                 price: '0',
                 titleTextStyle: captionTextStyle.merge(
@@ -311,7 +312,7 @@ class NewServiceScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              _buildRowPrice(
+              RowPriceDetailsWidget(
                 title: 'Total (XAF): ',
                 price: '0',
                 titleTextStyle: bodyBoldTextStyle,
@@ -336,30 +337,6 @@ class NewServiceScreen extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildRowPrice({
-    required String title,
-    required String price,
-    required TextStyle titleTextStyle,
-    required TextStyle priceTextStyle,
-  }) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: titleTextStyle,
-        ),
-        Expanded(
-          child: Text(
-            price,
-            textAlign: TextAlign.end,
-            style: priceTextStyle,
           ),
         ),
       ],

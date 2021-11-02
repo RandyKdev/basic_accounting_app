@@ -1,6 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/new/new_service_screen.dart';
+import 'package:basic/widgets/row_price_details_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -330,34 +331,22 @@ class NewProductScreen extends StatelessWidget {
           color: desaturatedGreyColor,
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Subtotal (XAF): ',
-                    style: captionTextStyle
-                        .merge(TextStyle(color: lightGreyColor)),
-                  ),
-                  Expanded(
-                    child: Text(
-                      '0',
-                      textAlign: TextAlign.end,
-                      style: captionTextStyle
-                          .merge(TextStyle(color: lightGreyColor)),
-                    ),
-                  ),
-                ],
+              RowPriceDetailsWidget(
+                title: 'Subtotal (XAF): ',
+                price: '0',
+                titleTextStyle: captionTextStyle.merge(
+                  TextStyle(color: lightGreyColor),
+                ),
+                priceTextStyle: captionTextStyle.merge(
+                  TextStyle(color: lightGreyColor),
+                ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Total (XAF): ', style: bodyBoldTextStyle),
-                  Expanded(
-                    child: Text('0',
-                        textAlign: TextAlign.end, style: bodyBoldTextStyle),
-                  ),
-                ],
+              RowPriceDetailsWidget(
+                title: 'Total (XAF): ',
+                price: '0',
+                titleTextStyle: bodyBoldTextStyle,
+                priceTextStyle: bodyBoldTextStyle,
               ),
               SizedBox(height: 20),
               InkWell(

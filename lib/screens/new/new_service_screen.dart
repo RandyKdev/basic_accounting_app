@@ -300,34 +300,22 @@ class NewServiceScreen extends StatelessWidget {
           color: desaturatedGreyColor,
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Subtotal (XAF): ',
-                    style: captionTextStyle
-                        .merge(TextStyle(color: lightGreyColor)),
-                  ),
-                  Expanded(
-                    child: Text(
-                      '0',
-                      textAlign: TextAlign.end,
-                      style: captionTextStyle
-                          .merge(TextStyle(color: lightGreyColor)),
-                    ),
-                  ),
-                ],
+              _buildRowPrice(
+                title: 'Subtotal (XAF): ',
+                price: '0',
+                titleTextStyle: captionTextStyle.merge(
+                  TextStyle(color: lightGreyColor),
+                ),
+                priceTextStyle: captionTextStyle.merge(
+                  TextStyle(color: lightGreyColor),
+                ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Total (XAF): ', style: bodyBoldTextStyle),
-                  Expanded(
-                    child: Text('0',
-                        textAlign: TextAlign.end, style: bodyBoldTextStyle),
-                  ),
-                ],
+              _buildRowPrice(
+                title: 'Total (XAF): ',
+                price: '0',
+                titleTextStyle: bodyBoldTextStyle,
+                priceTextStyle: bodyBoldTextStyle,
               ),
               SizedBox(height: 20),
               InkWell(
@@ -348,6 +336,30 @@ class NewServiceScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildRowPrice({
+    required String title,
+    required String price,
+    required TextStyle titleTextStyle,
+    required TextStyle priceTextStyle,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: titleTextStyle,
+        ),
+        Expanded(
+          child: Text(
+            price,
+            textAlign: TextAlign.end,
+            style: priceTextStyle,
           ),
         ),
       ],

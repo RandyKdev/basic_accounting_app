@@ -5,6 +5,7 @@ import 'package:basic/screens/new/new_expense_item_screen.dart';
 import 'package:basic/screens/new/new_expense_product_screen.dart';
 import 'package:basic/screens/new/new_item_screen.dart';
 import 'package:basic/screens/new/new_product_screen.dart';
+import 'package:basic/screens/new/new_supplier_screen.dart';
 import 'package:basic/screens/purchases/purchases_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -130,7 +131,7 @@ class _PurchasesScreenState extends State<PurchasesScreen>
               .push(MaterialPageRoute(builder: (BuildContext ctx) {
             if (_index == 0) return NewExpenseProductScreen();
             if (_index == 1) return NewExpenseItemScreen();
-            return NewCustomerScreen();
+            return NewSupplierScreen();
           }));
         },
         child: Icon(

@@ -1,5 +1,9 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/new/new_normal_customer_screen.dart';
+import 'package:basic/screens/new/new_normal_product_screen.dart';
+import 'package:basic/screens/new/new_normal_service_screen.dart';
+import 'package:basic/screens/new/new_normal_supplier_screen.dart';
 import 'package:flutter/material.dart';
 
 dynamic dashboardBody(BuildContext context) => SingleChildScrollView(
@@ -179,76 +183,94 @@ dynamic dashboardBody(BuildContext context) => SingleChildScrollView(
             Row(
               children: [
                 Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: lightGreenColor,
-                            borderRadius: BorderRadius.all(Radius.circular(60)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return NewNormalProductScreen();
+                      }));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightGreenColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/invoice_icon.png'),
                           ),
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.asset('images/invoice_icon.png'),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Invoice',
-                          style: captionBoldTextStyle,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'Easily create and manage your invoice to help you track your incomes',
-                          style: labelTextStyle
-                              .merge(TextStyle(color: lightGreyColor)),
-                        ),
-                      ],
+                          SizedBox(height: 10),
+                          Text(
+                            'Invoice',
+                            style: captionBoldTextStyle,
+                          ),
+                          SizedBox(height: 3),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(width: 20),
                 Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: lightRedColor,
-                            borderRadius: BorderRadius.all(Radius.circular(60)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return NewNormalServiceScreen();
+                      }));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightRedColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/expenses_icon.png'),
                           ),
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.asset('images/expenses_icon.png'),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Expenses',
-                          style: captionBoldTextStyle,
-                        ),
-                        Text(
-                          'Easily create and manage your invoice to help you track your incomes',
-                          style: labelTextStyle
-                              .merge(TextStyle(color: lightGreyColor)),
-                        ),
-                      ],
+                          SizedBox(height: 10),
+                          Text(
+                            'Expenses',
+                            style: captionBoldTextStyle,
+                          ),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -258,78 +280,96 @@ dynamic dashboardBody(BuildContext context) => SingleChildScrollView(
             Row(
               children: [
                 Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: lightOrangeColor,
-                            borderRadius: BorderRadius.all(Radius.circular(60)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return NewNormalCustomerScreen();
+                      }));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightOrangeColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/items_icon.png'),
                           ),
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.asset('images/items_icon.png'),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Items',
-                          style: captionBoldTextStyle,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'Easily create and manage your invoice to help you track your incomes',
-                          style: labelTextStyle
-                              .merge(TextStyle(color: lightGreyColor)),
-                        ),
-                      ],
+                          SizedBox(height: 10),
+                          Text(
+                            'Items',
+                            style: captionBoldTextStyle,
+                          ),
+                          SizedBox(height: 3),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(width: 20),
                 Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 20,
-                    ),
-                    decoration: BoxDecoration(
-                      color: whiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: lightPurpleColor,
-                            borderRadius: BorderRadius.all(Radius.circular(60)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return NewNormalSupplierScreen();
+                      }));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 20,
+                      ),
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: lightPurpleColor,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(60)),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image.asset('images/customer_icon.png'),
                           ),
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.asset('images/customer_icon.png'),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Customer',
-                          style: captionBoldTextStyle,
-                        ),
-                        SizedBox(height: 3),
-                        SizedBox(height: 3),
-                        Text(
-                          'Easily create and manage your invoice to help you track your incomes',
-                          style: labelTextStyle
-                              .merge(TextStyle(color: lightGreyColor)),
-                        ),
-                      ],
+                          SizedBox(height: 10),
+                          Text(
+                            'Customer',
+                            style: captionBoldTextStyle,
+                          ),
+                          SizedBox(height: 3),
+                          SizedBox(height: 3),
+                          Text(
+                            'Easily create and manage your invoice to help you track your incomes',
+                            style: labelTextStyle
+                                .merge(TextStyle(color: lightGreyColor)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

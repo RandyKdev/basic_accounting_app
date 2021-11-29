@@ -11,6 +11,7 @@ class ButtonWidget extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final ButtonSize size;
+  final bool outlined;
 
   const ButtonWidget({
     required this.backgroundColor,
@@ -19,6 +20,7 @@ class ButtonWidget extends StatelessWidget {
     required this.size,
     required this.text,
     required this.textColor,
+    this.outlined = false,
     Key? key,
   }) : super(key: key);
 
@@ -29,6 +31,7 @@ class ButtonWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(SizeUnitsClass.big)),
+          border: outlined ? Border.all(color: accentColor!, width: 1) : null,
           color: loading ? greyColor : backgroundColor,
         ),
         width: double.infinity,

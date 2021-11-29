@@ -4,17 +4,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 AppBar dashboardAppBar() {
+  SystemChrome.setEnabledSystemUIOverlays([
+    SystemUiOverlay.top,
+    SystemUiOverlay.bottom,
+  ]);
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: primaryColor,
+    statusBarBrightness: Brightness.dark,
+    systemNavigationBarIconBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
+    systemNavigationBarColor: desaturatedGreyColor,
+  ));
   return AppBar(
     automaticallyImplyLeading: false,
     backgroundColor: desaturatedGreyColor,
-    brightness: Brightness.dark,
-    systemOverlayStyle: SystemUiOverlayStyle(
-      statusBarColor: desaturatedGreyColor,
-      statusBarBrightness: Brightness.light,
-      systemNavigationBarIconBrightness: Brightness.dark,
-      statusBarIconBrightness: Brightness.dark,
-      systemNavigationBarColor: desaturatedGreyColor,
-    ),
+    // // brightness: Brightness.dark,
+    // systemOverlayStyle: SystemUiOverlayStyle(
+    //   statusBarColor: desaturatedGreyColor,
+    //   statusBarBrightness: Brightness.dark,
+    //   systemNavigationBarIconBrightness: Brightness.dark,
+    //   statusBarIconBrightness: Brightness.light,
+    //   systemNavigationBarColor: desaturatedGreyColor,
+    // ),
     elevation: 0,
     title: Text(
       'Dashboard',

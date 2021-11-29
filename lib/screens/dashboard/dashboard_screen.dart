@@ -15,12 +15,24 @@ class DashboardScreen extends StatelessWidget {
     ]);
 
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: desaturatedGreyColor,
-      statusBarBrightness: Brightness.light,
+      statusBarColor: primaryColor,
+      statusBarBrightness: Brightness.dark,
       systemNavigationBarIconBrightness: Brightness.dark,
-      statusBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.light,
       systemNavigationBarColor: desaturatedGreyColor,
     ));
+    // SystemChrome.setEnabledSystemUIOverlays([
+    //   SystemUiOverlay.top,
+    //   SystemUiOverlay.bottom,
+    // ]);
+
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //   statusBarColor: desaturatedGreyColor,
+    //   statusBarBrightness: Brightness.light,
+    //   systemNavigationBarIconBrightness: Brightness.dark,
+    //   statusBarIconBrightness: Brightness.dark,
+    //   systemNavigationBarColor: desaturatedGreyColor,
+    // ));
 
     return Scaffold(
       appBar: dashboardAppBar(),

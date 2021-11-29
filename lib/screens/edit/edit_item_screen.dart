@@ -2,7 +2,10 @@ import 'package:basic/Enums/button_size_enums.dart';
 import 'package:basic/classes/spacing_class.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/edit/edit_service1_screen.dart';
 import 'package:basic/screens/edit/edit_service_screen.dart';
+import 'package:basic/screens/new/new_item_screen.dart';
+import 'package:basic/screens/upload/upload_item_screen.dart';
 import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:basic/widgets/appbar_button_widget.dart';
 import 'package:basic/widgets/button_widget.dart';
@@ -40,14 +43,21 @@ class EditItemScreen extends StatelessWidget {
                 size: 17,
               ),
               isIconSameSize: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+              },
               size: ButtonSize.small,
               text: 'Return',
             ),
             AppBarButtonWidget(
               icon: Image.asset('images/edit_icon.png'),
               isIconSameSize: true,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return UploadItemScreen();
+                }));
+              },
               size: ButtonSize.small,
               text: 'Edit',
             ),
@@ -170,7 +180,12 @@ class EditItemScreen extends StatelessWidget {
             child: ButtonWidget(
               backgroundColor: lightRedColor!,
               loading: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return EditService1Screen();
+                }));
+              },
               size: ButtonSize.big,
               text: 'Delete product',
               textColor: redColor!,

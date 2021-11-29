@@ -1,6 +1,8 @@
 import 'package:basic/Enums/button_size_enums.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/new/new_service1_screen.dart';
+import 'package:basic/screens/new/new_service_screen.dart';
 import 'package:basic/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -209,10 +211,10 @@ class NewItemScreen extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 padding: EdgeInsets.symmetric(
-                  vertical: 20,
+                  vertical: 10,
                   horizontal: 20,
                 ),
-                height: 60,
+                // height: 60,
                 decoration: BoxDecoration(
                   color: whiteColor,
                   borderRadius: BorderRadius.all(
@@ -221,6 +223,8 @@ class NewItemScreen extends StatelessWidget {
                 ),
                 child: TextField(
                   keyboardType: TextInputType.number,
+                  minLines: 5,
+                  maxLines: 7,
                   decoration: InputDecoration(
                     hintText: 'Description',
                     hintStyle:
@@ -242,7 +246,12 @@ class NewItemScreen extends StatelessWidget {
             child: ButtonWidget(
               backgroundColor: accentColor!,
               loading: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return NewService1Screen();
+                }));
+              },
               size: ButtonSize.big,
               text: 'Save',
               textColor: whiteColor!,

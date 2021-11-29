@@ -1,5 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/edit/edit_customer_screen.dart';
+import 'package:basic/screens/edit/edit_item_screen.dart';
 import 'package:basic/screens/edit/edit_product_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -75,7 +77,12 @@ Column genListCustomers() {
           itemCount: 50,
           itemBuilder: (BuildContext context, int i) {
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return EditCustomerScreen();
+                }));
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(
                   vertical: 15,
@@ -171,7 +178,12 @@ Column genListItems() {
           itemCount: 50,
           itemBuilder: (BuildContext context, int i) {
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return EditItemScreen();
+                }));
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(
                   vertical: 15,

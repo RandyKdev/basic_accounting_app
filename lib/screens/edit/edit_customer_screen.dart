@@ -2,6 +2,7 @@ import 'package:basic/Enums/button_size_enums.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/edit/edit_service_screen.dart';
+import 'package:basic/screens/upload/upload_customer_screen.dart';
 import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:basic/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,7 @@ class EditCustomerScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                    return UploadProductScreen();
+                    return UploadCustomerScreen();
                   }));
                 },
                 child: Container(

@@ -209,10 +209,10 @@ class UploadItemScreen extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 padding: EdgeInsets.symmetric(
-                  vertical: 20,
+                  vertical: 10,
                   horizontal: 20,
                 ),
-                height: 60,
+                // height: 60,
                 decoration: BoxDecoration(
                   color: whiteColor,
                   borderRadius: BorderRadius.all(
@@ -220,7 +220,9 @@ class UploadItemScreen extends StatelessWidget {
                   ),
                 ),
                 child: TextField(
-                  keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.text,
+                  minLines: 5,
+                  maxLines: 7,
                   decoration: InputDecoration(
                     hintText: 'Description',
                     hintStyle:

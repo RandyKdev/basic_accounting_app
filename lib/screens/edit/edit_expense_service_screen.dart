@@ -1,13 +1,11 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/edit/edit_expense_service_screen.dart';
-import 'package:basic/screens/edit/edit_service_screen.dart';
-import 'package:basic/screens/upload/upload_product_screen.dart';
+import 'package:basic/screens/upload/upload_service_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class EditExpenseScreen extends StatelessWidget {
-  const EditExpenseScreen({Key? key}) : super(key: key);
+class EditExpenseServiceScreen extends StatelessWidget {
+  const EditExpenseServiceScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +70,7 @@ class EditExpenseScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
-                'Crepes from Jim',
+                'Webdesign pour Jim',
                 style: h6TextStyle.merge(TextStyle(color: whiteColor)),
               ),
             ),
@@ -96,7 +94,7 @@ class EditExpenseScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Text(
-                  'Product',
+                  'Service',
                   style: bodyTextStyle,
                 ),
               ),
@@ -124,38 +122,19 @@ class EditExpenseScreen extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: whiteColor,
-                            ),
-                            padding: EdgeInsets.symmetric(
-                              vertical: 20,
-                              horizontal: 20,
-                            ),
-                            child: Text(
-                              'Crepes',
-                              style: bodyTextStyle,
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 1),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: whiteColor,
-                          ),
-                          padding: EdgeInsets.symmetric(
-                            vertical: 20,
-                            horizontal: 20,
-                          ),
-                          child: Text(
-                            '08',
-                            style: bodyTextStyle,
-                          ),
-                        ),
-                      ],
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 20,
+                      ),
+                      child: Text(
+                        'Webdesign',
+                        style: bodyTextStyle,
+                      ),
                     ),
                     SizedBox(height: 1),
                     Container(
@@ -216,12 +195,7 @@ class EditExpenseScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                    return EditExpenseServiceScreen();
-                  }));
-                },
+                onTap: () {},
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),

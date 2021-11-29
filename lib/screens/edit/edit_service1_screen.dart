@@ -4,6 +4,7 @@ import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/edit/edit_service_screen.dart';
 import 'package:basic/screens/upload/upload_product_screen.dart';
+import 'package:basic/screens/upload/upload_service1_screen.dart';
 import 'package:basic/widgets/appbar_button_widget.dart';
 import 'package:basic/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
@@ -40,14 +41,21 @@ class EditService1Screen extends StatelessWidget {
                 size: 17,
               ),
               isIconSameSize: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+              },
               size: ButtonSize.small,
               text: 'Return',
             ),
             AppBarButtonWidget(
               icon: Image.asset('images/edit_icon.png'),
               isIconSameSize: true,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return UploadService1Screen();
+                }));
+              },
               size: ButtonSize.small,
               text: 'Edit',
             ),

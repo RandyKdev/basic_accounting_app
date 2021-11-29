@@ -1,6 +1,7 @@
 import 'package:basic/classes/size_units_class.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/about/about_us_screen.dart';
 import 'package:basic/screens/edit/edit_business_account_screen.dart';
 import 'package:basic/screens/edit/edit_customer_screen.dart';
 import 'package:basic/screens/edit/edit_expense_screen.dart';
@@ -70,7 +71,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: EditBusinessAccountScreen(),
+      home: AboutUsScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

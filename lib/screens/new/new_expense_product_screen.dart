@@ -1,5 +1,6 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/new/new_expense_service_screen.dart';
 import 'package:basic/screens/new/new_service_screen.dart';
 import 'package:basic/widgets/row_price_details_widget.dart';
 import 'package:flutter/material.dart';
@@ -353,7 +354,7 @@ class NewExpenseProductScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                    return NewServiceScreen();
+                    return NewExpenseServiceScreen();
                   }));
                 },
                 child: Container(

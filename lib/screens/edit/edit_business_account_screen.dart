@@ -41,7 +41,9 @@ class EditBusinessAccountScreen extends StatelessWidget {
                 size: 17,
               ),
               isIconSameSize: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+              },
               size: ButtonSize.big,
               text: 'Return',
             ),

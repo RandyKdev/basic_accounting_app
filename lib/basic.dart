@@ -71,7 +71,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: AboutUsScreen(),
+      home: MoreScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

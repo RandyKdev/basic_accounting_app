@@ -1,5 +1,8 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/about/about_us_screen.dart';
+import 'package:basic/screens/edit/edit_business_account_screen.dart';
+import 'package:basic/screens/edit/edit_personal_account_screen.dart';
 import 'package:flutter/material.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -48,7 +51,12 @@ class MoreScreen extends StatelessWidget {
                         Icons.arrow_forward_ios,
                         size: 16,
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext ctx) {
+                          return EditPersonalAccountScreen();
+                        }));
+                      },
                     ),
                     Divider(height: 0),
                     ListTile(
@@ -61,7 +69,12 @@ class MoreScreen extends StatelessWidget {
                         Icons.arrow_forward_ios,
                         size: 16,
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext ctx) {
+                          return EditBusinessAccountScreen();
+                        }));
+                      },
                     ),
                   ],
                 ),
@@ -91,7 +104,12 @@ class MoreScreen extends StatelessWidget {
                         Icons.arrow_forward_ios,
                         size: 16,
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext ctx) {
+                          return AboutUsScreen();
+                        }));
+                      },
                     ),
                     Divider(height: 0),
                     ListTile(

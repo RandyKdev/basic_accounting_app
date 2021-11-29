@@ -5,6 +5,7 @@ import 'package:basic/screens/edit/edit_customer_screen.dart';
 import 'package:basic/screens/edit/edit_expense_screen.dart';
 import 'package:basic/screens/edit/edit_item1_screen.dart';
 import 'package:basic/screens/edit/edit_item_screen.dart';
+import 'package:basic/screens/edit/edit_personal_account_screen.dart';
 import 'package:basic/screens/edit/edit_product_screen.dart';
 import 'package:basic/screens/edit/edit_service1_screen.dart';
 import 'package:basic/screens/edit/edit_service_screen.dart';
@@ -15,6 +16,7 @@ import 'package:basic/screens/auth/setup_account_screen.dart';
 import 'package:basic/screens/auth/verify_number_screen.dart';
 import 'package:basic/screens/dashboard/dashboard_screen.dart';
 import 'package:basic/screens/main/main_screen.dart';
+import 'package:basic/screens/more/more_screen.dart';
 import 'package:basic/screens/new/new_customer_screen.dart';
 import 'package:basic/screens/new/new_item_screen.dart';
 import 'package:basic/screens/new/new_product_screen.dart';
@@ -67,7 +69,7 @@ class Basic extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: desaturatedGreyColor,
       ),
-      home: EditItem1Screen(),
+      home: EditPersonalAccountScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

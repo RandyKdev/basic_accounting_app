@@ -5,6 +5,7 @@ import 'package:basic/screens/edit/edit_expense_item_screen.dart';
 import 'package:basic/screens/edit/edit_expense_screen.dart';
 import 'package:basic/screens/edit/edit_item_screen.dart';
 import 'package:basic/screens/edit/edit_product_screen.dart';
+import 'package:basic/screens/edit/edit_supplier_screen.dart';
 import 'package:flutter/material.dart';
 
 Widget purchasesBody(TabController tabController) {
@@ -82,7 +83,7 @@ Column genListSuppliers() {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                  return EditCustomerScreen();
+                  return EditSupplierScreen();
                 }));
               },
               child: Container(
@@ -97,7 +98,7 @@ Column genListSuppliers() {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Michele Manga',
+                          'John Ngu',
                           style: bodyTextStyle,
                         ),
                         SizedBox(height: 5),

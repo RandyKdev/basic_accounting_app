@@ -1,12 +1,14 @@
 import 'package:basic/Enums/button_size_enums.dart';
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
+import 'package:basic/screens/new/new_service1_screen.dart';
+import 'package:basic/screens/new/new_service_screen.dart';
 import 'package:basic/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class NewService1Screen extends StatelessWidget {
-  const NewService1Screen({Key? key}) : super(key: key);
+class NewExpenseItemScreen extends StatelessWidget {
+  const NewExpenseItemScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +97,7 @@ class NewService1Screen extends StatelessWidget {
                       style:
                           bodyTextStyle.merge(TextStyle(color: primaryColor)),
                       hint: Text(
-                        'Services',
+                        'Product',
                         style:
                             bodyTextStyle.merge(TextStyle(color: primaryColor)),
                       ),
@@ -125,8 +127,25 @@ class NewService1Screen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
+              Row(
+                children: [
+                  Radio(
+                    value: 1,
+                    groupValue: 1,
+                    onChanged: (int? t) {},
+                  ),
+                  Text(
+                    'Automatically add to products in stock',
+                    style: labelBoldTextStyle,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                padding: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 20,
+                ),
                 height: 60,
                 decoration: BoxDecoration(
                   color: whiteColor,
@@ -134,39 +153,97 @@ class NewService1Screen extends StatelessWidget {
                     Radius.circular(20),
                   ),
                 ),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton(
-                      style:
-                          bodyTextStyle.merge(TextStyle(color: primaryColor)),
-                      hint: Text(
-                        'Service name',
-                        style:
-                            bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                child: TextField(
+                  // maxLength: 3,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    hintText: 'Product name',
+                    hintStyle:
+                        bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                    contentPadding: EdgeInsets.symmetric(vertical: 8),
+                    enabledBorder: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 20,
                       ),
-                      onChanged: (String? t) {},
-                      icon: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 10,
-                          bottom: 5,
-                        ),
-                        child: RotatedBox(
-                          quarterTurns: 3,
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            size: 16,
-                            color: primaryColor,
-                          ),
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
                         ),
                       ),
-                      items: [
-                        DropdownMenuItem(
-                          value: 'Buea',
-                          child: Text('Buea'),
+                      child: TextField(
+                        // maxLength: 3,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintText: 'Unit price',
+                          hintStyle: bodyTextStyle
+                              .merge(TextStyle(color: primaryColor)),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8),
+                          enabledBorder: InputBorder.none,
                         ),
-                      ],
+                      ),
                     ),
+                  ),
+                  SizedBox(width: 10),
+                  Container(
+                    width: 80,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 20,
+                    ),
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: whiteColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                    ),
+                    child: TextField(
+                      // maxLength: 3,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        hintText: 'Qty',
+                        hintStyle:
+                            bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                        contentPadding: EdgeInsets.symmetric(vertical: 8),
+                        enabledBorder: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 20,
+                ),
+                height: 60,
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                ),
+                child: TextField(
+                  // maxLength: 3,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    hintText: 'Selling price',
+                    hintStyle:
+                        bodyTextStyle.merge(TextStyle(color: primaryColor)),
+                    contentPadding: EdgeInsets.symmetric(vertical: 8),
+                    enabledBorder: InputBorder.none,
                   ),
                 ),
               ),
@@ -208,7 +285,12 @@ class NewService1Screen extends StatelessWidget {
             child: ButtonWidget(
               backgroundColor: accentColor!,
               loading: false,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                  return NewService1Screen();
+                }));
+              },
               size: ButtonSize.big,
               text: 'Save',
               textColor: whiteColor!,

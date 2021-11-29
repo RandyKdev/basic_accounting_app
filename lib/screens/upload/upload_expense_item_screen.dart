@@ -5,8 +5,8 @@ import 'package:basic/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class UploadItemScreen extends StatelessWidget {
-  const UploadItemScreen({Key? key}) : super(key: key);
+class UploadExpenseItemScreen extends StatelessWidget {
+  const UploadExpenseItemScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,6 +123,20 @@ class UploadItemScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  Radio(
+                    value: 1,
+                    groupValue: 1,
+                    onChanged: (int? t) {},
+                  ),
+                  Text(
+                    'Automatically add to products in stock',
+                    style: labelBoldTextStyle,
+                  ),
+                ],
               ),
               SizedBox(height: 10),
               Container(

@@ -1,6 +1,7 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/new/new_customer_screen.dart';
+import 'package:basic/screens/new/new_expense_item_screen.dart';
 import 'package:basic/screens/new/new_expense_product_screen.dart';
 import 'package:basic/screens/new/new_item_screen.dart';
 import 'package:basic/screens/new/new_product_screen.dart';
@@ -128,7 +129,7 @@ class _PurchasesScreenState extends State<PurchasesScreen>
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext ctx) {
             if (_index == 0) return NewExpenseProductScreen();
-            if (_index == 1) return NewItemScreen();
+            if (_index == 1) return NewExpenseItemScreen();
             return NewCustomerScreen();
           }));
         },

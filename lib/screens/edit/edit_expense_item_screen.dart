@@ -5,6 +5,7 @@ import 'package:basic/constants/textstyle_constants.dart';
 import 'package:basic/screens/edit/edit_service1_screen.dart';
 import 'package:basic/screens/edit/edit_service_screen.dart';
 import 'package:basic/screens/new/new_item_screen.dart';
+import 'package:basic/screens/upload/upload_expense_item_screen.dart';
 import 'package:basic/screens/upload/upload_item_screen.dart';
 import 'package:basic/screens/upload/upload_product_screen.dart';
 import 'package:basic/widgets/appbar_button_widget.dart';
@@ -55,7 +56,7 @@ class EditExpenseItemScreen extends StatelessWidget {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                  return UploadItemScreen();
+                  return UploadExpenseItemScreen();
                 }));
               },
               size: ButtonSize.small,

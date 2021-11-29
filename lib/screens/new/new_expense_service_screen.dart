@@ -1,12 +1,11 @@
 import 'package:basic/constants/color_constants.dart';
 import 'package:basic/constants/textstyle_constants.dart';
-import 'package:basic/screens/new/new_service_screen.dart';
 import 'package:basic/widgets/row_price_details_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class NewExpenseProductScreen extends StatelessWidget {
-  const NewExpenseProductScreen({Key? key}) : super(key: key);
+class NewExpenseServiceScreen extends StatelessWidget {
+  const NewExpenseServiceScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +94,7 @@ class NewExpenseProductScreen extends StatelessWidget {
                       style:
                           bodyTextStyle.merge(TextStyle(color: primaryColor)),
                       hint: Text(
-                        'Product',
+                        'Service',
                         style:
                             bodyTextStyle.merge(TextStyle(color: primaryColor)),
                       ),
@@ -178,77 +177,48 @@ class NewExpenseProductScreen extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 20),
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: whiteColor,
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                      ),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton(
+                            style: bodyTextStyle
+                                .merge(TextStyle(color: primaryColor)),
+                            hint: Text(
+                              'Add a new service',
+                              style: bodyTextStyle
+                                  .merge(TextStyle(color: primaryColor)),
                             ),
-                            child: SizedBox(
-                              width: double.infinity,
-                              child: DropdownButtonHideUnderline(
-                                child: DropdownButton(
-                                  style: bodyTextStyle
-                                      .merge(TextStyle(color: primaryColor)),
-                                  hint: Text(
-                                    'Add a product',
-                                    style: bodyTextStyle
-                                        .merge(TextStyle(color: primaryColor)),
-                                  ),
-                                  onChanged: (String? t) {},
-                                  icon: Padding(
-                                    padding: const EdgeInsets.only(
-                                      left: 10,
-                                      bottom: 5,
-                                    ),
-                                    child: RotatedBox(
-                                      quarterTurns: 3,
-                                      child: Icon(
-                                        Icons.arrow_back_ios,
-                                        size: 16,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ),
-                                  items: [
-                                    DropdownMenuItem(
-                                      value: 'Buea',
-                                      child: Text('Buea'),
-                                    ),
-                                  ],
+                            onChanged: (String? t) {},
+                            icon: Padding(
+                              padding: const EdgeInsets.only(
+                                left: 10,
+                                bottom: 5,
+                              ),
+                              child: RotatedBox(
+                                quarterTurns: 3,
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  size: 16,
+                                  color: primaryColor,
                                 ),
                               ),
                             ),
+                            items: [
+                              DropdownMenuItem(
+                                value: 'Buea',
+                                child: Text('Buea'),
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(width: 1),
-                        Container(
-                          width: 80,
-                          padding: EdgeInsets.symmetric(
-                            vertical: 20,
-                            horizontal: 20,
-                          ),
-                          height: 60,
-                          decoration: BoxDecoration(
-                            color: whiteColor,
-                          ),
-                          child: TextField(
-                            // maxLength: 3,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: '00',
-                              hintStyle: bodyTextStyle
-                                  .merge(TextStyle(color: primaryColor)),
-                              contentPadding: EdgeInsets.symmetric(vertical: 8),
-                              enabledBorder: InputBorder.none,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                     SizedBox(height: 1),
                     Container(
@@ -263,9 +233,9 @@ class NewExpenseProductScreen extends StatelessWidget {
                       child: TextField(
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
-                          hintText: 'XAF0',
+                          hintText: 'Enter your pricing',
                           hintStyle: bodyTextStyle
-                              .merge(TextStyle(color: lightGreyColor)),
+                              .merge(TextStyle(color: primaryColor)),
                           contentPadding: EdgeInsets.symmetric(vertical: 8),
                           enabledBorder: InputBorder.none,
                         ),
@@ -288,7 +258,7 @@ class NewExpenseProductScreen extends StatelessWidget {
                         width: double.infinity,
                         padding: EdgeInsets.all(20),
                         child: Text(
-                          'Add a product',
+                          'Add a service',
                           textAlign: TextAlign.center,
                           style: bodyBoldTextStyle
                               .merge(TextStyle(color: accentColor)),
@@ -311,7 +281,7 @@ class NewExpenseProductScreen extends StatelessWidget {
                           horizontal: 5,
                         ),
                         child: Text(
-                          'Remove a product',
+                          'Remove a service',
                           textAlign: TextAlign.center,
                           style: bodyBoldTextStyle
                               .merge(TextStyle(color: redColor)),
@@ -350,12 +320,7 @@ class NewExpenseProductScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                    return NewServiceScreen();
-                  }));
-                },
+                onTap: () {},
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
